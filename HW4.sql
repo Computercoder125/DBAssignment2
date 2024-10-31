@@ -1,7 +1,7 @@
 create database assignment4;
 
 -- adding primary key constraints
-select * from address;
+
 ALTER TABLE address ADD CONSTRAINT pk_address PRIMARY KEY (address_id);
 ALTER TABLE actor ADD CONSTRAINT pk_actor PRIMARY KEY (actor_id);
 ALTER TABLE category ADD CONSTRAINT pk_category PRIMARY KEY (category_id);
@@ -75,11 +75,11 @@ CHECK(amount >= 0);
 -- checking for valid rental dates 
 ALTER TABLE rental
 ADD CONSTRAINT chk_rent_date
-CHECK(rental_date <= '2024-10-26');
+CHECK(rental_date <= '2024-10-26'); -- date I made the constraint on
 
 ALTER TABLE rental 
 ADD CONSTRAINT chk_ret_date
-CHECK(return_date <= '2024-10-26');
+CHECK(return_date <= '2024-10-26'); -- date I made the constraint on
 
 ALTER TABLE rental
 ADD CONSTRAINT chk_both_dates
